@@ -1,0 +1,31 @@
+Ionic Gradle issue in window 
+
+Step 1. Download the latest Gradle distribution
+	https://gradle.org/next-steps/?version=6.5&format=bin
+	
+Step 2. Create a new directory C:\Gradle
+
+Step 3. Unpack the distribution
+	C:\Gradle\gradle-6.5\
+	
+Step 4. Configure your system environment
+	Advanced System Settings -> Environmental Variables
+	Under System Variables select Path, then click Edit. Add an entry for C:\Gradle\gradle-6.5\bin. Click OK to save.
+	
+Step 5. Verify your installation
+	gradle -v
+	
+Step 6. Update _JAVA_OPTIONS
+	Configure your system environment
+	Advanced System Settings -> Environmental Variables
+	Under System Variables add new,
+	variable_name = _JAVA_OPTIONS
+	variable_value = -Xmx512M
+	
+Step 7. Download and add JDK
+	C:\Program Files (x86)\Java\jdk1.8.0_181\bin
+	Advanced System Settings -> Environmental Variables
+	Under System Variables select Path, then click Edit. Add an entry for C:\Program Files (x86)\Java\jdk1.8.0_181\bin Click OK to save.
+	
+Step 8. now run cmd
+	ionic cordova build android
